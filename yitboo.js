@@ -86,3 +86,14 @@ document.getElementById('switch-to-chinese').addEventListener('click', () => swi
 
 // 初始页面内容
 updateContent();
+
+document.addEventListener("DOMContentLoaded", function () {
+    const minWidth = 500; // 最小宽度
+    const screenWidth = window.innerWidth; // 用户屏幕宽度
+
+    // 计算缩放比例
+    const zoom = screenWidth <= minWidth ? screenWidth / minWidth : 1;
+
+    // 应用缩放
+    document.body.style.zoom = zoom;
+});
